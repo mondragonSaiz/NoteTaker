@@ -9,7 +9,7 @@ const app = express();
 const notes = require("./db/db.json");
 const id = require("./helpers/uuid");
 console.log("N", notes);
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
